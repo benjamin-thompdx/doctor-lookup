@@ -6,7 +6,7 @@
 
 ## Description
 
-Users can enter a medical issue (ie: “sore throat”, "rash", etc.) into our form, submit it, and receive a list of doctors in Portland, OR who can provide treatment.
+Users can enter a medical issue (ie: “sore throat”, "rash", etc.) or name into our form, submit it, and receive a list of doctors in Portland, OR who match the treatment or name specified.
 
 ## Preview
 ![Landing Page Preview](img/(img file name here))
