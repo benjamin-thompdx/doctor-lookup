@@ -1,26 +1,27 @@
-# _Dino Ipsum_
+# _Doctor Lookup_
 
-#### _An application to practice using API calls with the Dino Ipsum API. , Feb 2020_
+#### _An application that utilizes the BetterDoctor API to provide information about available doctors in Portland, OR who treat numerous medical needs. , Feb 2020_
 
 #### By _**Benjamin Thom and Kristina Hengster Tintor**_
 
 ## Description
 
-Input a number of paragraphs, and a number of words per paragraph and press "Give me dinos!" to display a Dino Ipsum.
+Users can enter a medical issue (ie: “sore throat”, "rash", etc.) into our form, submit it, and receive a list of doctors in Portland, OR who can provide treatment.
 
 ## Preview
-![Landing Page Preview](img/dino-preview.png)
-Click here for Live Preview: http://kristinaht.github.io/dino
+![Landing Page Preview](img/(img file name here))
+Click here for Live Preview: (GitHub.io URL Here))
 
 
 ## Project Specifications
 
 | Behavior | Input | Output |
 |---|:---:|:---:|
-|User inputs number of paragraphs|2|2 paragraphs|
-|User inputs number os worsd per paragraph|5|5 words per paragraph|
-|User clicks "Show me dinos!" button and is shown results from Dino Ipsum API|Button click|Display: <P>Lophorhothon Pachysauriscus Lagosuchus Chuanjiesaurus Astrodonius.</P> <p>Marisaurus Berberosaurus Aniksosaurus Probactrosaurus Hesperosaurus.</p>|
-||||
+|A user enters a medical issue and receives a list of doctors in the Portland area that fit the search query|sore throat|Doctors who provide treatment for "sore throat" in Portland, OR|
+|A user enters a name to receive a list of doctors in the Portland area that fit the search query|Bill|Doctors who's names include "Bill" in Portland, OR|
+|If the query response includes any doctors, the following information is included about each doctor: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients|NA|first name, last name, address, phone number, website, and doctor is accepting new patients: true or false|
+|If the API call results in an error, the application will return a notification to the user stating what the error is|NA|"There was an error handeling your request"|
+|If the query response doesn't include any doctors (for instance, if no doctors meet the search criteria), the application will return a notification that states that no doctors meet the criteria|user input|"No doctors found based on your search"|
 
 ## Setup/Installation Requirements
 
