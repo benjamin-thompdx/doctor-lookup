@@ -18,10 +18,10 @@ $(document).ready(function() {
 
     function getElements(response) {
       if (response) {
-        $('.showDoctors').html(`${response}`);
+        $('.showDoctors').text(`${response}`);
         $('.showDoctors').show();
       } else {
-        $('.showDoctors').html(`There was an error handeling your request.`);
+        $('.showDoctors').text(`There was an error handeling your request.`);
         $('.showDoctors').show();
       }
     }
