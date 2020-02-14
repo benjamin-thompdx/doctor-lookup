@@ -2,7 +2,7 @@
 
 #### _An application that utilizes the BetterDoctor API to provide information about available doctors in Portland, OR who treat numerous medical needs. , Feb 2020_
 
-#### By _**Benjamin Thom and Kristina Hengster Tintor**_
+#### By _**Benjamin Thom**_
 
 ## Description
 
