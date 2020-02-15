@@ -1,15 +1,18 @@
 body {
   position: relative;
   text-align: center;
-  color: orange;
+  color: rgb(255, 132, 0);
 }
 
-div.jumbotron {
-display: none;
+tr {
 width: 600px;
 word-wrap: break-word;
 position: relative;
 text-align: center;
 height:100%;
 width:100%;
+}
+
+td {
+  color: rgb(34, 34, 34);
 }

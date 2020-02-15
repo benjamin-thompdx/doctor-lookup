@@ -14,7 +14,6 @@ $(document).ready(function() {
       let doctorService = new DoctorService();
       const response = await doctorService.getDocByName(name);
       getElements(response);
-      console.log(response);
     })();
 
     function getElements(response) {
@@ -33,11 +32,11 @@ $(document).ready(function() {
           lastNameCell.innerHTML = value.profile.last_name;
         });
 
-        // $('.showByName').text(`${response.data[0].profile.first_name}`);
-        // $('.showByName').show();
+        // $('#showByName').text(`${response.data[0].profile.first_name}`);
+        // $('#showByName').show();
       } else {
-        $('.showByName').text(`There was an error handeling your request.`);
-        $('.showByName').show();
+        $('#showByName').text(`There was an error handeling your request.`);
+        $('#showByName').show();
       }
     }
 
