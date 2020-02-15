@@ -6,7 +6,7 @@ import { DoctorService } from './../src/doctor-service.js';
 
 $(document).ready(function() {
 
-  $('#findDoctor').click(function() {
+  $('#findDoctorByName').click(function() {
     const name = $('#doctorName').val();
     $('#doctorName').val("");
 
@@ -18,11 +18,11 @@ $(document).ready(function() {
 
     function getElements(response) {
       if (response) {
-        $('.showDoctors').text(`${response}`);
-        $('.showDoctors').show();
+        $('.showByName').text(`${response}`);
+        $('.showByName').show();
       } else {
-        $('.showDoctors').text(`There was an error handeling your request.`);
-        $('.showDoctors').show();
+        $('.showByName').text(`There was an error handeling your request.`);
+        $('.showByName').show();
       }
     }
 
