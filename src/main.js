@@ -14,11 +14,12 @@ $(document).ready(function() {
       let doctorService = new DoctorService();
       const response = await doctorService.getDocByName(name);
       getElements(response);
+      console.log(response);
     })();
 
     function getElements(response) {
       if (response) {
-        let table = document.getElementById('showByName');
+        let table = document.getElementById('userOutput');
         response.data.forEach(function (value, i) {
           let row = table.insertRow(i+1);
           let firstNameCell = row.insertCell(0);
@@ -36,7 +37,7 @@ $(document).ready(function() {
           acceptingNewPatientsCell.innerHTML = value.practices[0].accepts_new_patients;
         });
       } else {
-        $(".errors").text(`There was an error handeling your request.`);
+        $(".errors").text(`There was an error handling your request`);
       }
     }
   });
@@ -53,7 +54,7 @@ $(document).ready(function() {
 
     function getElements(response) {
       if (response) {
-        let table = document.getElementById('showByName');
+        let table = document.getElementById('userOutput');
         response.data.forEach(function (value, i) {
           let row = table.insertRow(i+1);
           let firstNameCell = row.insertCell(0);
@@ -71,7 +72,7 @@ $(document).ready(function() {
           acceptingNewPatientsCell.innerHTML = value.practices[0].accepts_new_patients;
         });
       } else {
-        $(".errors").text(`There was an error handeling your request.`);
+        $(".errors").text(`There was an error handling your request`);
       }
     }
   });

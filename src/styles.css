@@ -16,3 +16,7 @@ width:100%;
 td {
   color: rgb(34, 34, 34);
 }
+
+.errors {
+    color: rgb(34, 34, 34);
+}
