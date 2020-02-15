@@ -19,8 +19,22 @@ $(document).ready(function() {
 
     function getElements(response) {
       if (response) {
-        $('.showByName').text(`${response.data[0].profile.first_name}`);
-        $('.showByName').show();
+        let table = document.getElementById('showByName');
+        response.data.forEach(function (value, i) {
+          // console.log('index: ', i);
+          // console.log('value: ', value);
+          // console.log('first-name: ', value.profile.first_name);
+          let row = table.insertRow(i+1);
+
+          let firstNameCell = row.insertCell(0);
+          let lastNameCell = row.insertCell(1);
+
+          firstNameCell.innerHTML = value.profile.first_name;
+          lastNameCell.innerHTML = value.profile.last_name;
+        });
+
+        // $('.showByName').text(`${response.data[0].profile.first_name}`);
+        // $('.showByName').show();
       } else {
         $('.showByName').text(`There was an error handeling your request.`);
         $('.showByName').show();
