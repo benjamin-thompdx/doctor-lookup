@@ -14,11 +14,12 @@ $(document).ready(function() {
       let doctorService = new DoctorService();
       const response = await doctorService.getDocByName(name);
       getElements(response);
+      console.log(response);
     })();
 
     function getElements(response) {
       if (response) {
-        $('.showByName').text(`${response}`);
+        $('.showByName').text(`${response.data[0].profile.first_name}`);
         $('.showByName').show();
       } else {
         $('.showByName').text(`There was an error handeling your request.`);
@@ -27,4 +28,5 @@ $(document).ready(function() {
     }
 
   });
+
 });
