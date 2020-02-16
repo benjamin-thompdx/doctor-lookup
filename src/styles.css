@@ -4,13 +4,17 @@ body {
   color: rgb(255, 132, 0);
 }
 
+h3 {
+  color: rgb(34, 34, 34);
+}
+
 tr {
-width: 600px;
-word-wrap: break-word;
-position: relative;
-text-align: center;
-height:100%;
-width:100%;
+  width: 600px;
+  word-wrap: break-word;
+  position: relative;
+  text-align: center;
+  height:100%;
+  width:100%;
 }
 
 td {
@@ -18,5 +22,9 @@ td {
 }
 
 .errors {
-    color: rgb(34, 34, 34);
+  color: rgb(34, 34, 34);
+}
+
+.noDoctors {
+  color: rgb(34, 34, 34);
 }
