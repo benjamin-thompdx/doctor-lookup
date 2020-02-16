@@ -10,8 +10,6 @@ Users can enter a medical issue (ie: “sore throat”, "rash", etc.) or name in
 
 ## Preview
 ![Landing Page Preview](img/doctor-lookup-preview.png)
-Click here for Live Preview: (GitHub.io URL Here))
-
 
 ## Project Specifications
 
