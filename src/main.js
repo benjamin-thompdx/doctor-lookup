@@ -14,7 +14,6 @@ $(document).ready(function() {
       let doctorService = new DoctorService();
       const response = await doctorService.getDocByName(name);
       getElements(response);
-      console.log(response);
     })();
 
     function getElements(response) {
