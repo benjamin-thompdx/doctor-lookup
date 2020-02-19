@@ -21,7 +21,7 @@ $(document).ready(function() {
         if(response.data.length > 0) {
           let table = document.getElementById('userOutput');
           $(".noDoctors").empty();
-          
+
           for(var i = table.rows.length - 1; i > 0; i--) {
             table.deleteRow(i);
           }
@@ -48,6 +48,11 @@ $(document).ready(function() {
           });
         } else {
           $(".noDoctors").text('No doctors found based on your search');
+          let table = document.getElementById('userOutput');
+          
+          for(var index = table.rows.length - 1; index > 0; index--) {
+            table.deleteRow(index);
+          }
         }
       } else {
         $(".errors").text(`There was an error handling your request`);
@@ -97,6 +102,11 @@ $(document).ready(function() {
           });
         } else {
           $(".noDoctors").text('No doctors found based on your search');
+          let table = document.getElementById('userOutput');
+          
+          for(var index = table.rows.length - 1; index > 0; index--) {
+            table.deleteRow(index);
+          }
         }
       } else {
         $(".errors").text(`There was an error handling your request`);
