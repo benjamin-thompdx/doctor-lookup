@@ -21,6 +21,11 @@ $(document).ready(function() {
       if (response) {
         if(response.data.length > 0) {
           let table = document.getElementById('userOutput');
+          
+          for(var i = table.rows.length - 1; i > 0; i--) {
+            table.deleteRow(i);
+          }
+
           response.data.forEach(function (value, i) {
             let row = table.insertRow(i+1);
             let firstNameCell = row.insertCell(0);
@@ -34,7 +39,11 @@ $(document).ready(function() {
             lastNameCell.innerHTML = value.profile.last_name;
             addressCell.innerHTML = value.practices[0].visit_address.street + "," + " " + value.practices[0].visit_address.street2 + "," + " " + value.practices[0].visit_address.city + "," + " " + value.practices[0].visit_address.state + "," + " " + value.practices[0].visit_address.zip;
             phoneCell.innerHTML = value.practices[0].phones[0].number + "," + " " + value.practices[0].phones[0].type;
-            websiteCell.innerHTML = value.practices[0].website;
+            if (!value.practices[0].website) {
+              websiteCell.innerHTML = 'There is no website available';
+            } else {
+              websiteCell.innerHTML = value.practices[0].website;
+            }
             acceptingNewPatientsCell.innerHTML = value.practices[0].accepts_new_patients;
           });
         } else {
@@ -60,6 +69,11 @@ $(document).ready(function() {
       if (response) {
         if(response.data.length > 0) {
           let table = document.getElementById('userOutput');
+
+          for(var i = table.rows.length - 1; i > 0; i--) {
+            table.deleteRow(i);
+          }
+
           response.data.forEach(function (value, i) {
             let row = table.insertRow(i+1);
             let firstNameCell = row.insertCell(0);
@@ -73,7 +87,11 @@ $(document).ready(function() {
             lastNameCell.innerHTML = value.profile.last_name;
             addressCell.innerHTML = value.practices[0].visit_address.street + "," + " " + value.practices[0].visit_address.street2 + "," + " " + value.practices[0].visit_address.city + "," + " " + value.practices[0].visit_address.state + "," + " " + value.practices[0].visit_address.zip;
             phoneCell.innerHTML = value.practices[0].phones[0].number + "," + " " + value.practices[0].phones[0].type;
-            websiteCell.innerHTML = value.practices[0].website;
+            if (!value.practices[0].website) {
+              websiteCell.innerHTML = 'There is no website available';
+            } else {
+              websiteCell.innerHTML = value.practices[0].website;
+            }
             acceptingNewPatientsCell.innerHTML = value.practices[0].accepts_new_patients;
           });
         } else {
