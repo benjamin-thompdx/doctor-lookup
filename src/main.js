@@ -13,6 +13,7 @@ $(document).ready(function() {
     (async () => {
       let doctorService = new DoctorService();
       const response = await doctorService.getDocByName(name);
+      console.log(response);
       getElements(response);
     })();
 
@@ -33,7 +34,7 @@ $(document).ready(function() {
             lastNameCell.innerHTML = value.profile.last_name;
             addressCell.innerHTML = value.practices[0].visit_address.street + "," + " " + value.practices[0].visit_address.street2 + "," + " " + value.practices[0].visit_address.city + "," + " " + value.practices[0].visit_address.state + "," + " " + value.practices[0].visit_address.zip;
             phoneCell.innerHTML = value.practices[0].phones[0].number + "," + " " + value.practices[0].phones[0].type;
-            websiteCell.innerHTML = 'https://BetterDocotor.com';
+            websiteCell.innerHTML = value.practices[0].website;
             acceptingNewPatientsCell.innerHTML = value.practices[0].accepts_new_patients;
           });
         } else {
@@ -72,7 +73,7 @@ $(document).ready(function() {
             lastNameCell.innerHTML = value.profile.last_name;
             addressCell.innerHTML = value.practices[0].visit_address.street + "," + " " + value.practices[0].visit_address.street2 + "," + " " + value.practices[0].visit_address.city + "," + " " + value.practices[0].visit_address.state + "," + " " + value.practices[0].visit_address.zip;
             phoneCell.innerHTML = value.practices[0].phones[0].number + "," + " " + value.practices[0].phones[0].type;
-            websiteCell.innerHTML = 'https://BetterDocotor.com';
+            websiteCell.innerHTML = value.practices[0].website;
             acceptingNewPatientsCell.innerHTML = value.practices[0].accepts_new_patients;
           });
         } else {
