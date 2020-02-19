@@ -20,6 +20,7 @@ $(document).ready(function() {
       if (response) {
         if(response.data.length > 0) {
           let table = document.getElementById('userOutput');
+          $(".noDoctors").empty();
           
           for(var i = table.rows.length - 1; i > 0; i--) {
             table.deleteRow(i);
@@ -68,6 +69,7 @@ $(document).ready(function() {
       if (response) {
         if(response.data.length > 0) {
           let table = document.getElementById('userOutput');
+          $(".noDoctors").empty();
 
           for(var i = table.rows.length - 1; i > 0; i--) {
             table.deleteRow(i);
