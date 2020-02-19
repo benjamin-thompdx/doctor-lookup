@@ -13,7 +13,6 @@ $(document).ready(function() {
     (async () => {
       let doctorService = new DoctorService();
       const response = await doctorService.getDocByName(name);
-      console.log(response);
       getElements(response);
     })();
 
